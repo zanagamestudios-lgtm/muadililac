@@ -1,0 +1,13 @@
+# Signing and secret files — never publish these
+*.jks
+*.keystore
+*.aab
+*.apk
+*credentials*.txt
+*password*.txt
+*secret*.txt
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
