@@ -1,0 +1,270 @@
+{
+  "source_file": "titck.xlsx",
+  "source_sha256": "69322b1e6daf7aa3a0b2316110f74d16bb500a05a394d50b88e5322b211ec8a9",
+  "snapshot_date": "2026-08-18",
+  "canonical_records": 18077,
+  "active_records": 7929,
+  "passive_records": 10148,
+  "new_records_sheet": 6,
+  "changed_records_sheet": 5,
+  "pending_passive_records": 0,
+  "new_records_marked": 6,
+  "sheet_reports": [
+    {
+      "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 7929,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "temel_ilac_listesi_durumu",
+        "cocuk_temel_ilac_listesi_durumu",
+        "yenidogan_temel_ilac_listesi_durumu",
+        "aktif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "ACTIVE"
+    },
+    {
+      "sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 10156,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "pasif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "PASSIVE"
+    },
+    {
+      "sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "header_row": 3,
+      "records": 0,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "role": "PENDING_PASSIVE"
+    },
+    {
+      "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "header_row": 3,
+      "records": 6,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "role": "NEW"
+    },
+    {
+      "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "header_row": 3,
+      "records": 5,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "role": "CHANGED"
+    }
+  ],
+  "pending_passive_samples": [],
+  "missing_fields": {
+    "product_name": 0,
+    "barcode": 0,
+    "manufacturer": 322,
+    "atc_code": 0,
+    "active_ingredient": 0
+  },
+  "duplicate_barcodes": [],
+  "canonical_status_conflicts": [
+    {
+      "barcode": "8680199001181",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "MOXICUM 400 MG/250 ML IV INFUZYON COZELTISI",
+          "active_date": "2026-11-08",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "MOXICUM 400 MG/250 ML IV INFUZYON COZELTISI",
+          "active_date": "",
+          "passive_date": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "barcode": "8680199031294",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "INSUPRID 2 MG TABLET (30 TABLET)",
+          "active_date": "2026-11-08",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "INSUPRID 2 MG 30 TABLET",
+          "active_date": "",
+          "passive_date": "2023-10-10"
+        }
+      ]
+    },
+    {
+      "barcode": "8680199094749",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "ROSUSTAR 10 MG FILM KAPLI TABLET (28 ADET)",
+          "active_date": "2026-11-08",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "ROSUSTAR 10 MG 28 FILM KAPLI TABLET",
+          "active_date": "",
+          "passive_date": "2025-10-21"
+        }
+      ]
+    },
+    {
+      "barcode": "8680760091320",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "ENFEXOL 500 MG FILM KAPLI TABLET (10 TABLET)",
+          "active_date": "2026-09-06",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "ENFEXOL 500 MG FILM KAPLI TABLET (10 TABLET)",
+          "active_date": "",
+          "passive_date": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "barcode": "8680941002046",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "ZOLKA 5MG/100 ML IV INFUZYON ICIN KONS. COZELTI ICEREN 1 FLAKON",
+          "active_date": "2026-11-08",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "ZOLKA 5MG/100 ML IV INFUZYON ICIN KONS. COZELTI ICEREN 1 FLAKON",
+          "active_date": "",
+          "passive_date": "2025-10-21"
+        }
+      ]
+    },
+    {
+      "barcode": "8699514094708",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "TILANTA 60 MG FILM KAPLI TABLET (56 TABLET)",
+          "active_date": "2026-09-06",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "TILANTA 60 MG FILM KAPLI TABLET (56 TABLET)",
+          "active_date": "",
+          "passive_date": "2023-11-14"
+        }
+      ]
+    },
+    {
+      "barcode": "8699686690012",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "HUMAN ALBUMIN OCTAPHARMA %20 IV INFUZYONLUK COZELTI, 50 ML",
+          "active_date": "2026-09-06",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "HUMAN ALBUMIN OCTAPHARMA %20 IV INFUZYONLUK COZELTI, 50 ML",
+          "active_date": "",
+          "passive_date": "2026-01-13"
+        }
+      ]
+    },
+    {
+      "barcode": "8699828150169",
+      "rows": [
+        {
+          "status": "ACTIVE",
+          "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+          "product_name": "RIFCAP 300 MG 60 KAPSUL",
+          "active_date": "2026-09-06",
+          "passive_date": ""
+        },
+        {
+          "status": "PASSIVE",
+          "sheet": "PASİF ÜRÜNLER LİSTESİ",
+          "product_name": "RIFCAP 300 MG 60 KAPSUL",
+          "active_date": "",
+          "passive_date": "2013-10-12"
+        }
+      ]
+    }
+  ],
+  "policy": "AKTİF/PASİF kanonik listeler esas alınır; aynı barkod iki kanonik listede bulunursa AKTİF listesi güncel durum kabul edilir ve çatışma raporlanır; PASİFE ALINACAK geçici liste nihai pasiflik olarak uygulanmaz; yeni/değişiklik sayfaları metadata ile işaretlenir."
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "2026-08-18-69322b1e6daf",
+  "dataVersion": "SKRS-XLSX-69322b1e6daf",
+  "snapshotDate": "2026-08-18",
+  "generatedAt": "2026-08-20T06:47:56.701525+00:00",
+  "source": "https://www.titck.gov.tr/dinamikmodul/43",
+  "documentation": "https://skrs.saglik.gov.tr/doc/index.html#servis7",
+  "sourceFile": "titck.xlsx",
+  "sourceSha256": "69322b1e6daf7aa3a0b2316110f74d16bb500a05a394d50b88e5322b211ec8a9",
+  "recordCount": 18077,
+  "activeCount": 7929,
+  "passiveCount": 10148,
+  "newCount": 6,
+  "files": {
+    "medicines.json.gz": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/medicines.json.gz",
+      "latestPath": "data/releases/latest/medicines.json.gz",
+      "bytes": 1211212,
+      "sha256": "e4074196897215dd2bd7560ba44bc57018d3fa01d59b1c8f395d830b4211cb69"
+    },
+    "medicines.json": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/medicines.json",
+      "latestPath": "data/releases/latest/medicines.json",
+      "bytes": 15806649,
+      "sha256": "631d57fd2ca896b1c0eb6dca554774a2c1a20544c4ae731ca5146d6fad775f42"
+    },
+    "prepackaged.db": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/prepackaged.db",
+      "latestPath": "data/releases/latest/prepackaged.db",
+      "bytes": 15626240,
+      "sha256": "f95beb4dadeb9ad20754423173a228b5fddf4a23819a9f3b6c26fb8a57a41cf9"
+    },
+    "equivalences.json": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/equivalences.json",
+      "latestPath": "data/releases/latest/equivalences.json",
+      "bytes": 139,
+      "sha256": "680cd354747577ad61c72cd9faf3b6c708bd9f89b717849ac67ccadfd053cac0"
+    },
+    "quality_report.json": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/quality_report.json",
+      "latestPath": "data/releases/latest/quality_report.json",
+      "bytes": 7471,
+      "sha256": "4f8543064feb6b3ccbdb15d0f3ca1b50f45c74b746efa1efd971a44ab2fddd0f"
+    },
+    "change_report.json": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/change_report.json",
+      "latestPath": "data/releases/latest/change_report.json",
+      "bytes": 7471,
+      "sha256": "4f8543064feb6b3ccbdb15d0f3ca1b50f45c74b746efa1efd971a44ab2fddd0f"
+    },
+    "source_manifest.json": {
+      "path": "data/releases/2026-08-18-69322b1e6daf/source_manifest.json",
+      "latestPath": "data/releases/latest/source_manifest.json",
+      "bytes": 2635,
+      "sha256": "25b1969cd4a3f320459b3a1dad292963c08c7dc514ff0f3b0421c8df2f7db6c2"
+    }
+  },
+  "updatePolicy": "Kullanıcı onayı olmadan veri değiştirilmez. Uygulama güncelleme önerisini çarşamba günleri gösterir; indirme ve atomik uygulama yalnızca kullanıcı onayından sonra yapılır."
+}
