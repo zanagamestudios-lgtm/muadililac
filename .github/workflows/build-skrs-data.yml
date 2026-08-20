@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       xlsx_path:
-        description: "Repository içindeki Excel yolu; boş bırakılırsa data/incoming içindeki en yeni XLSX kullanılır"
+        description: "Repository içindeki Excel yolu; boş bırakılırsa otomatik TİTCK indirmesi yapılır"
         required: false
         type: string
   push:
@@ -53,8 +53,20 @@ jobs:
           mkdir -p "$RUNNER_TEMP/skrs"
           INPUT=""
           SNAPSHOT_DATE=""
+          AUTO_DOWNLOAD="false"
 
-          if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then
+          if [[ -n "$MANUAL_XLSX_PATH" ]]; then
+            INPUT="$MANUAL_XLSX_PATH"
+          elif [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            INPUT="$(find data/incoming -maxdepth 1 -type f -iname '*.xlsx' -printf '%T@ %p\n' | sort -nr | head -n 1 | cut -d' ' -f2-)"
+            if [[ -z "$INPUT" ]]; then
+              AUTO_DOWNLOAD="true"
+            fi
+          else
+            AUTO_DOWNLOAD="true"
+          fi
+
+          if [[ "$AUTO_DOWNLOAD" == "true" ]]; then
             python scripts/download_titck_excel.py \
               --output "$RUNNER_TEMP/skrs/titck.xlsx" \
               --metadata-output "$RUNNER_TEMP/skrs/download.json" \
@@ -84,11 +96,6 @@ jobs:
           PY
             )"
           else
-            if [[ -n "$MANUAL_XLSX_PATH" ]]; then
-              INPUT="$MANUAL_XLSX_PATH"
-            else
-              INPUT="$(find data/incoming -maxdepth 1 -type f -iname '*.xlsx' -printf '%T@ %p\n' | sort -nr | head -n 1 | cut -d' ' -f2-)"
-            fi
             test -n "$INPUT"
             test -f "$INPUT"
             SNAPSHOT_DATE="$(python - "$INPUT" <<'PY'
