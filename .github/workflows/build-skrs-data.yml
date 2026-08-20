@@ -1,0 +1,175 @@
+name: Build and publish SKRS data
+
+on:
+  schedule:
+    # GitHub Actions UTC kullanır; Türkiye UTC+3 olduğundan 09:00 TRT = 06:00 UTC.
+    - cron: "0 6 * * 3"
+  workflow_dispatch:
+    inputs:
+      xlsx_path:
+        description: "Repository içindeki Excel yolu; boş bırakılırsa data/incoming içindeki en yeni XLSX kullanılır"
+        required: false
+        type: string
+  push:
+    paths:
+      - "data/incoming/*.xlsx"
+      - "scripts/download_titck_excel.py"
+      - "scripts/build_skrs_workbook.py"
+      - "scripts/prepare_android_asset.py"
+      - "scripts/build_prepackaged_db.py"
+      - "scripts/publish_skrs_release.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: skrs-data-publish
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install data dependencies
+        run: python -m pip install --upgrade pip pandas openpyxl
+
+      - name: Select or download source Excel
+        id: source
+        shell: bash
+        env:
+          MANUAL_XLSX_PATH: ${{ inputs.xlsx_path }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/skrs"
+          INPUT=""
+          SNAPSHOT_DATE=""
+
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then
+            python scripts/download_titck_excel.py \
+              --output "$RUNNER_TEMP/skrs/titck.xlsx" \
+              --metadata-output "$RUNNER_TEMP/skrs/download.json" \
+              --latest-manifest data/releases/latest/source_manifest.json
+            STATUS="$(python - "$RUNNER_TEMP/skrs/download.json" <<'PY'
+          import json
+          import sys
+          print(json.load(open(sys.argv[1], encoding="utf-8"))["status"])
+          PY
+            )"
+            if [[ "$STATUS" == "unchanged" ]]; then
+              echo "TİTCK’deki en yeni XLSX daha önce yayımlanmış; yeni dönüşüm gerekmiyor."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            INPUT="$RUNNER_TEMP/skrs/titck.xlsx"
+            SNAPSHOT_DATE="$(python - "$RUNNER_TEMP/skrs/download.json" <<'PY'
+          import json
+          import sys
+          from datetime import datetime
+          payload = json.load(open(sys.argv[1], encoding="utf-8"))
+          source_date = payload.get("sourceDate")
+          if source_date:
+              print(source_date)
+          else:
+              print(datetime.utcnow().date().isoformat())
+          PY
+            )"
+          else
+            if [[ -n "$MANUAL_XLSX_PATH" ]]; then
+              INPUT="$MANUAL_XLSX_PATH"
+            else
+              INPUT="$(find data/incoming -maxdepth 1 -type f -iname '*.xlsx' -printf '%T@ %p\n' | sort -nr | head -n 1 | cut -d' ' -f2-)"
+            fi
+            test -n "$INPUT"
+            test -f "$INPUT"
+            SNAPSHOT_DATE="$(python - "$INPUT" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+          name = Path(sys.argv[1]).name
+          match = re.search(r'(\d{2})\.(\d{2})\.(\d{4})', name)
+          if not match:
+              raise SystemExit(f"Excel dosya adında GG.AA.YYYY tarihi bulunamadı: {name}")
+          print(f"{match.group(3)}-{match.group(2)}-{match.group(1)}")
+          PY
+            )"
+          fi
+
+          INPUT_SHA="$(sha256sum "$INPUT" | cut -d' ' -f1)"
+          CURRENT_SHA="$(python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('data/releases/latest/source_manifest.json')
+          if not path.exists():
+              print('')
+          else:
+              print(json.loads(path.read_text(encoding='utf-8')).get('sourceSha256', ''))
+          PY
+          )"
+          if [[ -n "$CURRENT_SHA" && "$INPUT_SHA" == "$CURRENT_SHA" ]]; then
+            echo "Aynı kaynak SHA-256 değeri zaten yayımlanmış; yeni dönüşüm gerekmiyor."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "input=$INPUT" >> "$GITHUB_OUTPUT"
+          echo "snapshot_date=$SNAPSHOT_DATE" >> "$GITHUB_OUTPUT"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Kaynak: $INPUT"
+          echo "Yayın tarihi: $SNAPSHOT_DATE"
+          echo "Kaynak SHA-256: $INPUT_SHA"
+
+      - name: Build, validate and stage release
+        if: steps.source.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          python scripts/publish_skrs_release.py \
+            --input "${{ steps.source.outputs.input }}" \
+            --snapshot-date "${{ steps.source.outputs.snapshot_date }}" \
+            --output-root data/releases \
+            --source-url "https://www.titck.gov.tr/dinamikmodul/43" \
+            --documentation-url "https://skrs.saglik.gov.tr/doc/index.html#servis7"
+
+      - name: Verify published manifest and payload hashes
+        if: steps.source.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          manifest_path = Path('data/releases/latest/manifest.json')
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          for filename, metadata in manifest['files'].items():
+              path = Path('data/releases/latest') / filename
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              assert digest == metadata['sha256'], (filename, digest, metadata['sha256'])
+              assert path.stat().st_size == metadata['bytes'], filename
+          assert manifest['recordCount'] > 0
+          print(json.dumps({'releaseId': manifest['releaseId'], 'recordCount': manifest['recordCount'], 'files': list(manifest['files'])}, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit generated release
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/releases
+          if git diff --cached --quiet; then
+            echo "Üretilecek yeni veri değişikliği yok."
+          else
+            git commit -m "chore(data): publish SKRS ${{ steps.source.outputs.snapshot_date }}"
+            git push
+          fi
