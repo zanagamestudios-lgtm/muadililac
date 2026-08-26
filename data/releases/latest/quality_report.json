@@ -1,19 +1,19 @@
 {
   "source_file": "titck.xlsx",
-  "source_sha256": "69322b1e6daf7aa3a0b2316110f74d16bb500a05a394d50b88e5322b211ec8a9",
-  "snapshot_date": "2026-08-18",
-  "canonical_records": 18077,
-  "active_records": 7929,
-  "passive_records": 10148,
-  "new_records_sheet": 6,
-  "changed_records_sheet": 5,
+  "source_sha256": "7add883bc4d8b794a6018d06a4f88019f5b6b218f125511e51fd7448842459ae",
+  "snapshot_date": "2026-08-25",
+  "canonical_records": 18088,
+  "active_records": 7944,
+  "passive_records": 10144,
+  "new_records_sheet": 11,
+  "changed_records_sheet": 4,
   "pending_passive_records": 0,
-  "new_records_marked": 6,
+  "new_records_marked": 11,
   "sheet_reports": [
     {
       "sheet": "AKTİF ÜRÜNLER LİSTESİ",
       "header_row": 3,
-      "records": 7929,
+      "records": 7944,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -35,7 +35,7 @@
     {
       "sheet": "PASİF ÜRÜNLER LİSTESİ",
       "header_row": 3,
-      "records": 10156,
+      "records": 10152,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -71,7 +71,7 @@
     {
       "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
       "header_row": 3,
-      "records": 6,
+      "records": 11,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -88,7 +88,7 @@
     {
       "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
       "header_row": 3,
-      "records": 5,
+      "records": 4,
       "columns": [
         "ilac_adi",
         "barkod",
