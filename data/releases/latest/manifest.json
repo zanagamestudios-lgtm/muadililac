@@ -1,59 +1,59 @@
 {
   "schemaVersion": 1,
-  "releaseId": "2026-10-06-3c0fc7420913",
-  "dataVersion": "SKRS-XLSX-3c0fc7420913",
-  "snapshotDate": "2026-10-06",
-  "generatedAt": "2026-10-07T12:13:22.575377+00:00",
+  "releaseId": "2026-10-13-904ac0e37f77",
+  "dataVersion": "SKRS-XLSX-904ac0e37f77",
+  "snapshotDate": "2026-10-13",
+  "generatedAt": "2026-10-14T10:46:59.612806+00:00",
   "source": "https://www.titck.gov.tr/dinamikmodul/43",
   "documentation": "https://skrs.saglik.gov.tr/doc/index.html#servis7",
   "sourceFile": "titck.xlsx",
-  "sourceSha256": "3c0fc7420913e1f2ffb948ff86cd0d3d6eef9b6faeb51df5b6bce5a601f54629",
-  "recordCount": 18151,
-  "activeCount": 7987,
-  "passiveCount": 10164,
-  "newCount": 6,
+  "sourceSha256": "904ac0e37f77ca61f24e383bfc6dff9b42f154dd8b16a1dfd285c75721875076",
+  "recordCount": 18161,
+  "activeCount": 7949,
+  "passiveCount": 10212,
+  "newCount": 10,
   "files": {
     "medicines.json.gz": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/medicines.json.gz",
+      "path": "data/releases/2026-10-13-904ac0e37f77/medicines.json.gz",
       "latestPath": "data/releases/latest/medicines.json.gz",
-      "bytes": 1218309,
-      "sha256": "13bf3f5b9ab283ffb287b041cc040e1f32223582102bcfae706f58723c451bb2"
+      "bytes": 1221870,
+      "sha256": "25d0f7d066c6710e1e3bc4054313ba7735d6cf6fadbecdf2b3cf7cea0836d8df"
     },
     "medicines.json": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/medicines.json",
+      "path": "data/releases/2026-10-13-904ac0e37f77/medicines.json",
       "latestPath": "data/releases/latest/medicines.json",
-      "bytes": 15879898,
-      "sha256": "b39d4a0ba2ebe27713593fb68221401d1fd8999ad099170c1b0df965bdeafa5c"
+      "bytes": 15889389,
+      "sha256": "da75cfd4a908586d734ed63a552a912c66edd4bfac4c45608a930a1e603e7d52"
     },
     "prepackaged.db": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/prepackaged.db",
+      "path": "data/releases/2026-10-13-904ac0e37f77/prepackaged.db",
       "latestPath": "data/releases/latest/prepackaged.db",
-      "bytes": 15679488,
-      "sha256": "9441ece2d9d348af3495e72f5b4f602b184f05dd16d5cf73f2941a0db2ec5701"
+      "bytes": 15675392,
+      "sha256": "edfde1462997e30e55da29c3bc24f9567099775309fe2414beb8fd4c75e55f44"
     },
     "equivalences.json": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/equivalences.json",
+      "path": "data/releases/2026-10-13-904ac0e37f77/equivalences.json",
       "latestPath": "data/releases/latest/equivalences.json",
       "bytes": 139,
       "sha256": "680cd354747577ad61c72cd9faf3b6c708bd9f89b717849ac67ccadfd053cac0"
     },
     "quality_report.json": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/quality_report.json",
+      "path": "data/releases/2026-10-13-904ac0e37f77/quality_report.json",
       "latestPath": "data/releases/latest/quality_report.json",
-      "bytes": 11741,
-      "sha256": "3f2d912690a5fe9b863689506fd6729d1c1cb722dcc7402ecaf414661d6c4526"
+      "bytes": 3058,
+      "sha256": "3a42173b1b31a258068ca28b7cea433cc6b78355dc7ef852882faafa9004ec11"
     },
     "change_report.json": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/change_report.json",
+      "path": "data/releases/2026-10-13-904ac0e37f77/change_report.json",
       "latestPath": "data/releases/latest/change_report.json",
-      "bytes": 11741,
-      "sha256": "3f2d912690a5fe9b863689506fd6729d1c1cb722dcc7402ecaf414661d6c4526"
+      "bytes": 3058,
+      "sha256": "3a42173b1b31a258068ca28b7cea433cc6b78355dc7ef852882faafa9004ec11"
     },
     "source_manifest.json": {
-      "path": "data/releases/2026-10-06-3c0fc7420913/source_manifest.json",
+      "path": "data/releases/2026-10-13-904ac0e37f77/source_manifest.json",
       "latestPath": "data/releases/latest/source_manifest.json",
-      "bytes": 2636,
-      "sha256": "a73beb3ccbe6092d54497ed5bb68e602dd2fbdf17947315ef3dfc9c186a81596"
+      "bytes": 2638,
+      "sha256": "b33cef6cbc1a4dd1d4bd3e02dcf8f84a4710a4e9634251412c98c7b79a3e35c7"
     }
   },
   "updatePolicy": "Kullanıcı onayı olmadan veri değiştirilmez. Uygulama güncelleme önerisini çarşamba günleri gösterir; indirme ve atomik uygulama yalnızca kullanıcı onayından sonra yapılır."

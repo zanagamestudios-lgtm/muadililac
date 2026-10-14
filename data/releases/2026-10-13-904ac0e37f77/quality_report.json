@@ -1,0 +1,117 @@
+{
+  "source_file": "titck.xlsx",
+  "source_sha256": "904ac0e37f77ca61f24e383bfc6dff9b42f154dd8b16a1dfd285c75721875076",
+  "snapshot_date": "2026-10-13",
+  "canonical_records": 18161,
+  "active_records": 7949,
+  "passive_records": 10212,
+  "new_records_sheet": 10,
+  "changed_records_sheet": 48,
+  "pending_passive_records": 0,
+  "new_records_marked": 10,
+  "sheet_reports": [
+    {
+      "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 7949,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "temel_ilac_listesi_durumu",
+        "cocuk_temel_ilac_listesi_durumu",
+        "yenidogan_temel_ilac_listesi_durumu",
+        "aktif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "ACTIVE"
+    },
+    {
+      "sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 10212,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "pasif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "PASSIVE"
+    },
+    {
+      "sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "header_row": 3,
+      "records": 0,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "role": "PENDING_PASSIVE"
+    },
+    {
+      "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "header_row": 3,
+      "records": 10,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "role": "NEW"
+    },
+    {
+      "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "header_row": 3,
+      "records": 48,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "role": "CHANGED"
+    }
+  ],
+  "pending_passive_samples": [],
+  "missing_fields": {
+    "product_name": 0,
+    "barcode": 0,
+    "manufacturer": 322,
+    "atc_code": 0,
+    "active_ingredient": 0
+  },
+  "duplicate_barcodes": [],
+  "canonical_status_conflicts": [],
+  "policy": "AKTİF/PASİF kanonik listeler esas alınır; aynı barkod iki kanonik listede bulunursa AKTİF listesi güncel durum kabul edilir ve çatışma raporlanır; PASİFE ALINACAK geçici liste nihai pasiflik olarak uygulanmaz; yeni/değişiklik sayfaları metadata ile işaretlenir."
+}
