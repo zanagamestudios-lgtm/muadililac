@@ -1,0 +1,107 @@
+{
+  "dataVersion": "SKRS-XLSX-a813594b388a",
+  "source": "https://www.titck.gov.tr/dinamikmodul/43",
+  "documentation": "https://skrs.saglik.gov.tr/doc/index.html#servis7",
+  "sourceFile": "titck.xlsx",
+  "sourceSha256": "a813594b388a7e329fb3aed40623bc4b71ac798d1b147796bcc0e9a7c1d3810e",
+  "snapshotDate": "2026-10-20",
+  "recordCount": 18196,
+  "activeCount": 7987,
+  "passiveCount": 10209,
+  "newCount": 35,
+  "generatedAt": "2026-10-21T10:45:29.701873+00:00",
+  "workbookSheets": [
+    {
+      "sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 7987,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "temel_ilac_listesi_durumu",
+        "cocuk_temel_ilac_listesi_durumu",
+        "yenidogan_temel_ilac_listesi_durumu",
+        "aktif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "AKTİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "ACTIVE"
+    },
+    {
+      "sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "header_row": 3,
+      "records": 10209,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama",
+        "pasif_urunler_listesine_alindigi_tarih"
+      ],
+      "expected_sheet": "PASİF ÜRÜNLER LİSTESİ",
+      "role": "canonical",
+      "status": "PASSIVE"
+    },
+    {
+      "sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "header_row": 3,
+      "records": 0,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "PASİFE ALINACAK ÜRÜNLER",
+      "role": "PENDING_PASSIVE"
+    },
+    {
+      "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "header_row": 3,
+      "records": 35,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
+      "role": "NEW"
+    },
+    {
+      "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "header_row": 3,
+      "records": 19,
+      "columns": [
+        "ilac_adi",
+        "barkod",
+        "atc_kodu",
+        "atc_adi",
+        "firma_adi",
+        "recete_turu",
+        "durumu",
+        "aciklama"
+      ],
+      "expected_sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
+      "role": "CHANGED"
+    }
+  ]
+}
