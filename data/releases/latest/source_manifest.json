@@ -1,20 +1,20 @@
 {
-  "dataVersion": "SKRS-XLSX-a813594b388a",
+  "dataVersion": "SKRS-XLSX-9e3d2aa6e49f",
   "source": "https://www.titck.gov.tr/dinamikmodul/43",
   "documentation": "https://skrs.saglik.gov.tr/doc/index.html#servis7",
   "sourceFile": "titck.xlsx",
-  "sourceSha256": "a813594b388a7e329fb3aed40623bc4b71ac798d1b147796bcc0e9a7c1d3810e",
-  "snapshotDate": "2026-10-20",
-  "recordCount": 18196,
-  "activeCount": 7987,
-  "passiveCount": 10209,
-  "newCount": 35,
-  "generatedAt": "2026-10-21T10:45:29.701873+00:00",
+  "sourceSha256": "9e3d2aa6e49f8a6e2b31c2b4cb4fd85977f24718c929c3773ae1137133f71a62",
+  "snapshotDate": "2026-10-27",
+  "recordCount": 18210,
+  "activeCount": 8004,
+  "passiveCount": 10206,
+  "newCount": 14,
+  "generatedAt": "2026-10-28T11:46:04.403167+00:00",
   "workbookSheets": [
     {
       "sheet": "AKTİF ÜRÜNLER LİSTESİ",
       "header_row": 3,
-      "records": 7987,
+      "records": 8004,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -36,7 +36,7 @@
     {
       "sheet": "PASİF ÜRÜNLER LİSTESİ",
       "header_row": 3,
-      "records": 10209,
+      "records": 10206,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -72,7 +72,7 @@
     {
       "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
       "header_row": 3,
-      "records": 35,
+      "records": 14,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -89,7 +89,7 @@
     {
       "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
       "header_row": 3,
-      "records": 19,
+      "records": 4,
       "columns": [
         "ilac_adi",
         "barkod",
