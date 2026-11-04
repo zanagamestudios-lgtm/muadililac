@@ -1,19 +1,19 @@
 {
   "source_file": "titck.xlsx",
-  "source_sha256": "9e3d2aa6e49f8a6e2b31c2b4cb4fd85977f24718c929c3773ae1137133f71a62",
-  "snapshot_date": "2026-10-27",
-  "canonical_records": 18210,
-  "active_records": 8004,
+  "source_sha256": "1928ae878c63c4c38d94f2741a98a908b462e2b6b90cee9e7f77e139a8a99024",
+  "snapshot_date": "2026-11-03",
+  "canonical_records": 18222,
+  "active_records": 8016,
   "passive_records": 10206,
-  "new_records_sheet": 14,
-  "changed_records_sheet": 4,
-  "pending_passive_records": 0,
-  "new_records_marked": 14,
+  "new_records_sheet": 12,
+  "changed_records_sheet": 0,
+  "pending_passive_records": 56,
+  "new_records_marked": 12,
   "sheet_reports": [
     {
       "sheet": "AKTİF ÜRÜNLER LİSTESİ",
       "header_row": 3,
-      "records": 8004,
+      "records": 8016,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -54,7 +54,7 @@
     {
       "sheet": "PASİFE ALINACAK ÜRÜNLER",
       "header_row": 3,
-      "records": 0,
+      "records": 56,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -71,7 +71,7 @@
     {
       "sheet": "LİSTEYE YENİ EKLENEN ÜRÜNLER",
       "header_row": 3,
-      "records": 14,
+      "records": 12,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -88,7 +88,7 @@
     {
       "sheet": "DEĞİŞİKLİK YAPILAN ÜRÜNLER",
       "header_row": 3,
-      "records": 4,
+      "records": 0,
       "columns": [
         "ilac_adi",
         "barkod",
@@ -103,7 +103,208 @@
       "role": "CHANGED"
     }
   ],
-  "pending_passive_samples": [],
+  "pending_passive_samples": [
+    {
+      "ilac_adi": "AKLAV BID 200 MG/28,5 MG PEDIATRIK SUSPANSIYON HAZIRLAMAK ICIN KURU TOZ (100 ML)",
+      "barkod": "8699591280063",
+      "atc_kodu": "J01CR02",
+      "atc_adi": "amoxicillin and beta-lactamase inhibitor",
+      "firma_adi": "BERKO İLAÇ VE KİMYA SAN. A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "AKLAV BID 400 MG/57 MG FORT SUSPANSIYON HAZIRLAMAK ICIN KURU TOZ (100 ML)",
+      "barkod": "8699591280070",
+      "atc_kodu": "J01CR02",
+      "atc_adi": "amoxicillin and beta-lactamase inhibitor",
+      "firma_adi": "BERKO İLAÇ VE KİMYA SAN. A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "ATACAND 16 MG 28 TABLET",
+      "barkod": "8699786010031",
+      "atc_kodu": "C09CA06",
+      "atc_adi": "candesartan",
+      "firma_adi": "ASTRAZENECA İLAÇ SAN.VE TİC.LTD.ŞTİ.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "ATACAND 8 MG 28 TABLET",
+      "barkod": "8699786010024",
+      "atc_kodu": "C09CA06",
+      "atc_adi": "candesartan",
+      "firma_adi": "ASTRAZENECA İLAÇ SAN.VE TİC.LTD.ŞTİ.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "AZRO 5 ML 200 MG 15 ML SUSPANSIYON",
+      "barkod": "8699502280250",
+      "atc_kodu": "J01FA10",
+      "atc_adi": "azithromycin",
+      "firma_adi": "SANOFİ İLAÇ SANAYİ ve TİC. A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "BIOMENT BID 200/28 ORAL 70 ML SUSPANSIYON",
+      "barkod": "8699638284375",
+      "atc_kodu": "J01CR02",
+      "atc_adi": "amoxicillin and enzyme inhibitor",
+      "firma_adi": "TEVA İLAÇLARI SANAYİ VE TİCARET A.Ş",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "BIOMENT BID FORTE 400/57 70 ML ORAL SUSPANSIYON",
+      "barkod": "8699638284382",
+      "atc_kodu": "J01CR02",
+      "atc_adi": "amoxicillin and enzyme inhibitor",
+      "firma_adi": "TEVA İLAÇLARI SANAYİ VE TİCARET A.Ş",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "CASODEX 50 MG 28 TABLET",
+      "barkod": "8699786090040",
+      "atc_kodu": "L02BB03",
+      "atc_adi": "bicalutamide",
+      "firma_adi": "ASTRAZENECA İLAÇ SAN.VE TİC.LTD.ŞTİ.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "COLEVITD3 150.000 I.U./10 ML ORAL DAMLA, COZELTI (10 ML)",
+      "barkod": "8684278010019",
+      "atc_kodu": "A11CC05",
+      "atc_adi": "colecalciferol",
+      "firma_adi": "LUMİNA HEALTHCARE SAĞLIK İLAÇ SANAYİ VE TİCARET LİMİTED ŞİRKETİ",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "COMBISAR 5/160 MG FILM KAPLI TABLET (28 TABLET)",
+      "barkod": "8699569091790",
+      "atc_kodu": "C09DB01",
+      "atc_adi": "valsartan and amlodipine",
+      "firma_adi": "BİLİM İLAÇ SANAYİİ VE TİCARET A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "CORBINAL %1 KREM (15 G)",
+      "barkod": "8699578350420",
+      "atc_kodu": "D01AE15",
+      "atc_adi": "terbinafine",
+      "firma_adi": "BİOFARMA İLAÇ SANAYİ VE TİCARET A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "DEXIREN 50 MG/2 ML IM/IV ENJEKSIYON VE INFUZYON ICIN COZELTI ICEREN 6 AMPUL",
+      "barkod": "8699680750019",
+      "atc_kodu": "M01AE17",
+      "atc_adi": "dexketoprofen",
+      "firma_adi": "İLKO İLAÇ SAN. VE TİC. A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "EPIZONYA 100 MG KAPSUL (100 KAPSUL)",
+      "barkod": "8699510150729",
+      "atc_kodu": "N03AX15",
+      "atc_adi": "zonisamide",
+      "firma_adi": "LİBA LABORATUARLARI A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "FOVEPTA 200 IU/0,4 ML IM/SC ENJEKSIYONLUK COZELTI ICEREN KULLANIMA HAZIR ENJEKTOR (1 ADET)",
+      "barkod": "8699535980530",
+      "atc_kodu": "J06BB04",
+      "atc_adi": "hepatitis B immunoglobulin",
+      "firma_adi": "KANSUK LABORATUARI SANAYİ VE TİCARET A.Ş.",
+      "recete_turu": "Mor",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "IMPACT ORAL RTD KAHVE 237 ML",
+      "barkod": "8690632990552",
+      "atc_kodu": "V06DB",
+      "atc_adi": "Fat/carbohydrates/proteins/minerals/vitamins, combinations",
+      "firma_adi": "NESTLE TÜRKİYE GIDA SANAYİ A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "INAPROL FORT 500 MG 20 TABLET",
+      "barkod": "8699569010043",
+      "atc_kodu": "M01AE02",
+      "atc_adi": "naproxen",
+      "firma_adi": "BİLİM İLAÇ SANAYİİ VE TİCARET A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "KLAMOKS PED.156,25 MG 100 ML ORAL SUSPANSIYON",
+      "barkod": "8699569280064",
+      "atc_kodu": "J01CR02",
+      "atc_adi": "amoxicillin and enzyme inhibitor",
+      "firma_adi": "BİLİM İLAÇ SANAYİİ VE TİCARET A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "LAUFRAN 8 MG/4 ML ENJEKSIYONLUK COZELTI 1 AMPUL",
+      "barkod": "8680222750307",
+      "atc_kodu": "A04AA01",
+      "atc_adi": "ondansetron",
+      "firma_adi": "HAVER TRAKYA İLAÇ SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "LINIGA PLUS 2.5 MG/850 MG FILM KAPLI TABLET (60 ADET)",
+      "barkod": "8699293098270",
+      "atc_kodu": "A10BD11",
+      "atc_adi": "metformin and linagliptin",
+      "firma_adi": "GENVEON İLAÇ SANAYİ VE TİCARET A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    },
+    {
+      "ilac_adi": "MEDEXOL %0,1 GOZ VE KULAK DAMLASI(1 MG/ML, 5ML)",
+      "barkod": "8680199611618",
+      "atc_kodu": "S03BA01",
+      "atc_adi": "dexamethasone",
+      "firma_adi": "WORLD MEDICINE İLAÇ SAN. VE TİC. A.Ş.",
+      "recete_turu": "Normal",
+      "durumu": "Aktif",
+      "aciklama": "İTS'ye Göre Piyasada Bulunmadığı İçin Pasife Alınacaktır."
+    }
+  ],
   "missing_fields": {
     "product_name": 0,
     "barcode": 0,
